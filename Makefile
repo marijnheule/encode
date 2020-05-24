@@ -1,4 +1,7 @@
-all: PythagoreanTriples Ramsey Schur
+all: ErdosDiscrepancy PythagoreanTriples Ramsey Schur
+
+PythagoreanTriples: ErdosDiscrepancy.c
+	gcc ErdosDiscrepancy.c -O2 -o ErdosDiscrepancy
 
 PythagoreanTriples: PythagoreanTriples.c
 	gcc PythagoreanTriples.c -O2 -o PythagoreanTriples
@@ -10,4 +13,4 @@ Schur: Schur.c
 	gcc Schur.c -O2 -o Schur
 
 clean:
-	rm PythagoreanTriples Ramsey Schur
+	rm ErdosDiscrepancy PythagoreanTriples Ramsey Schur
