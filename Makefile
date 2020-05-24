@@ -1,5 +1,5 @@
 Ramsey: Ramsey.c
-        gcc Ramsey.c -O2 -o Ramsey
+	gcc Ramsey.c -O2 -o Ramsey
 
 clean:
-        rm Ramsey
+	rm Ramsey
