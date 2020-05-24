@@ -5,6 +5,7 @@
 ********************************************************************/
 
 #include <stdio.h>
+#include <stdlib.h>
 
 int main (int argc, char** argv) {
   int a, b, c, d, k, nClauses = 0, nVars;

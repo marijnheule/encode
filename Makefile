@@ -1,6 +1,6 @@
 all: ErdosDiscrepancy PythagoreanTriples Ramsey Schur
 
-PythagoreanTriples: ErdosDiscrepancy.c
+ErdosDiscrepancy: ErdosDiscrepancy.c
 	gcc ErdosDiscrepancy.c -O2 -o ErdosDiscrepancy
 
 PythagoreanTriples: PythagoreanTriples.c
