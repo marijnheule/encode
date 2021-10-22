@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 int main (int argc, char** argv) {
-  int size = atoi (argv[1]);
+  int size = atoi (argv[1]) + 1;
   int nVar = size * (size - 1);
   int nCls = size + size * (size - 1) * (size - 1) / 2;
 
