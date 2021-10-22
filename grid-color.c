@@ -8,8 +8,6 @@ int var (int i, int j, int c) {
   return i * m * k + j * k + c; }
 
 int main (int argc, char** argv) {
-  int true = 0, false = 0;
-
   if (argc < 4) {
     printf ("run using ./grid-color N M K\n"); exit (0); }
 
