@@ -1,4 +1,4 @@
-all: ErdosDiscrepancy PythagoreanTriples Ramsey Schur grid-color
+all: ErdosDiscrepancy PythagoreanTriples Ramsey Schur grid-color php
 
 ErdosDiscrepancy: ErdosDiscrepancy.c
 	gcc ErdosDiscrepancy.c -O2 -o ErdosDiscrepancy
@@ -15,5 +15,8 @@ Schur: Schur.c
 grid-color: grid-color.c
 	gcc grid-color.c -O2 -o grid-color
 
+php: php.c
+	gcc php.c -O2 -o php
+
 clean:
-	rm ErdosDiscrepancy PythagoreanTriples Ramsey Schur grid-color
+	rm ErdosDiscrepancy PythagoreanTriples Ramsey Schur grid-color php
