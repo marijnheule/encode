@@ -23,7 +23,7 @@ int atmostone (int* array, int size, int aux) {
   printf ("%i %i 0\n", -array[1], aux);
   printf ("%i %i 0\n", -array[2], aux);
 
-  for (int i = 0; i <= size - 3; i++)
+  for (int i = 0; i < size - 3; i++)
     array[i] = array[i+3];
   array[size-3] = aux;
 
