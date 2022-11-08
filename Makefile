@@ -1,4 +1,4 @@
-all: ErdosDiscrepancy PythagoreanTriples Ramsey Schur grid-color php atmostone maxclique
+all: ErdosDiscrepancy PythagoreanTriples Ramsey Schur grid-color php atmostone maxclique Green
 
 ErdosDiscrepancy: ErdosDiscrepancy.c
 	gcc ErdosDiscrepancy.c -O2 -o ErdosDiscrepancy
@@ -24,5 +24,8 @@ atmostone: atmostone.c
 maxclique: maxclique.c
 	gcc maxclique.c -O2 -o maxclique
 
+Green: Green.c
+	gcc Green.c -O2 -o Green
+
 clean:
-	rm ErdosDiscrepancy PythagoreanTriples Ramsey Schur grid-color php atmostone maxclique
+	rm ErdosDiscrepancy PythagoreanTriples Ramsey Schur grid-color php atmostone maxclique Green
