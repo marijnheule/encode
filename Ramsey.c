@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <assert.h>
 
+//#define SBP
+
 int edge (int a, int b) {
   assert (a != b);
   assert (a >  0);
@@ -60,7 +62,22 @@ int main (int argc, char** argv) {
     for (j = 1; j <= clique[i]; j++) product /= j;
     nCls += product; }
 
+#ifdef SBP
+  if (nColor == 2) nCls += nNode - 2;
+#endif
+
   printf ("p cnf %i %i\n", nVar, nCls);
+
+#ifdef SBP
+  for (int i = 2; i < nNode; i++)
+    printf ("%i -%i 0\n", edge (1,i), edge (1, i+1));
+
+  for (int i = 3; i < nNode; i++)
+    printf ("-%i %i -%i 0\n", edge (1,i+1), edge (2,i), edge (2, i+1));
+
+  for (int i = nNode-1; i > 2; i--)
+    printf ("%i -%i %i 0\n", edge (1,i-1), edge (nNode,i), edge (nNode, i-1));
+#endif
 
   if (nColor > 2) {
    for (i = 1; i <= nNode * (nNode - 1) / 2; i++) {
