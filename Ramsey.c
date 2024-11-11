@@ -58,8 +58,7 @@ int main (int argc, char** argv) {
 
   for (i = 0; i < nColor; i++) {
     int product = 1;
-    for (j = 0; j <  clique[i]; j++) { product *= (nNode - j); product /= (j+1); }
-//    for (j = 1; j <= clique[i]; j++) product /= j;
+    for (j = 0; j < clique[i]; j++) { product *= (nNode - j); product /= (j+1); }
     nCls += product; }
 
 #ifdef SBP
